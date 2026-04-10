@@ -58,13 +58,13 @@ def setup_sam_3d_body(
 
     if detector_name:
         print(f"Loading human detector from {detector_name}...")
-        from tools.build_detector import HumanDetector
+        from sam_3d_body.tools.build_detector import HumanDetector
 
         human_detector = HumanDetector(name=detector_name, device=device)
 
     if segmentor_path:
         print(f"Loading human segmentor from {segmentor_path}...")
-        from tools.build_sam import HumanSegmentor
+        from sam_3d_body.tools.build_sam import HumanSegmentor
 
         human_segmentor = HumanSegmentor(
             name=segmentor_name, device=device, path=segmentor_path
@@ -72,7 +72,7 @@ def setup_sam_3d_body(
 
     if fov_name:
         print(f"Loading FOV estimator from {fov_name}...")
-        from tools.build_fov_estimator import FOVEstimator
+        from sam_3d_body.tools.build_fov_estimator import FOVEstimator
 
         fov_estimator = FOVEstimator(name=fov_name, device=device)
 
